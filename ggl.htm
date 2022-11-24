@@ -1,15 +1,6 @@
 <html lang="ca" dir="ltr" class="CMgTXc" data-lt-installed="true">
     <meta http-equiv="Content-Type" content="text/html;charset=windows-1252"/>
 <script>
-    const checkbox = document.getElementById('viewpass')
-
-checkbox.addEventListener('change', (event) => {
-  if (event.currentTarget.checked) {
-    document.getElementById("passwordin").setAttribute("type","text")
-  } else {
-    document.getElementById("passwordin").setAttribute("type","password")
-  }
-})
     function findaccount(){
         window.location.href = "https://accounts.google.com/signin/v2/usernamerecovery?service=accountsettings&continue=https%3A%2F%2Fgoogle.com%2F%3Fpli%3D1&ec=GAlAwAE&hl=ca&authuser=0&flowName=GlifWebSignIn&flowEntry=AddSession"
     }
